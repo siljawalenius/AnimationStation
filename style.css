@@ -52,6 +52,7 @@ h1.emoji span{
 
 img{
     max-width: 100%;
+    box-shadow: 0 0 30px rgba(0,0,0,0.25)
 }
 
 .info h2{
@@ -62,7 +63,18 @@ section{
     display:grid;
     grid-template-columns: 1fr 1fr;
     min-height: 100vh;
+    overflow:hidden;
+    grid-auto-flow:dense;
 }
+
+section.alt div.split:first-child{
+    grid-column:2;
+}
+
+section.alt div.split:last-child{
+    grid-column:1;
+}
+
 
 section p{
     margin: 32px 0 0 0;
@@ -96,5 +108,25 @@ section div.slideshow img{
 
 section div.info{
     max-width: 480px;
+    padding: 32px;
 }
 
+
+
+@media(max-width: 1080px){
+    section{
+        display:block;
+    }
+
+    section div.split{
+        padding: 64px 0;
+    }
+}
+
+@media(max-width: 700px){
+    section div.slideshow,
+    section div.slideshow img{
+        width: 80vw;
+        height: 120vw; 
+    }
+}
