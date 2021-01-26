@@ -3,8 +3,13 @@
     src: url(assets/ptroot.woff2);
 }
 
+:root{
+    --cards-bg: #0B0113;
+    --text-bg: #000;
+}
+
 body{
-    background-color: #000;
+    background-color: var(--text-bg);
     color: #fff;
     font-family: PTRoot, Helvetics, sans-serif;
 
@@ -52,6 +57,7 @@ h1.emoji span{
 
 img{
     max-width: 100%;
+    
     box-shadow: 0 0 30px rgba(0,0,0,0.25)
 }
 
@@ -87,21 +93,19 @@ section div.split{
 }
 
 section div.split:first-child{
-    background-color: #111111;
+    background-color:var(--cards-bg);
 }
 
 section div.slideshow{
     position:relative;
-    width: 500px;
-    height: 750px;
+    width: 300px;
+    height: 500px;
 }
 
 section div.slideshow img{
     position:absolute;
     top:0;
     left:0;
-    width: 500px;
-    height: 750px;
 }
 
 
